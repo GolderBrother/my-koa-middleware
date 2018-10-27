@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <style>
+    .red{
+      color:red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Home</h1>
+  <h3 class="red">用在自己项目中时,一般就选择其中一种方式,否则会上传一些无效文件的问题</h3>
+  <hr>
+  <form action="http://localhost:3000/upload" enctype="multipart/form-data" method="POST">
+    <div>
+      <label for="">名称：</label>
+      <input type="text" name="name" value="postbird">
+    </div>
+    <div>
+      <label for="">单文件上传</label>
+      <!-- 单个文件上传 start -->
+      <input type="file" name="photo2">
+      <!-- 单个文件上传 end -->
+    </div>
+    <div>
+      <button type="submit" id="submit">submit</button>
+    </div>
+  </form>
+  <!-- <script>
+    $("#submit").click(function(){
+      var canSubmit = false;
+      $("input[type='file']").each(function(file){
+        canSubmit = true;
+        var value = $(this).val();
+        if(!value){
+          alert("请选择文件上传！")
+          canSubmit = false;
+          return false; //break   true -> continue
+        }
+      });
+      if(!canSubmit){
+        return false;
+      }
+    });
+  </script> -->
+  <hr>
+</body>
+
+</html>
